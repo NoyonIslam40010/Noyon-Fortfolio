@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@mixin border-radius($value) {
+  border-radius: $value;
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  -ms-border-radius: $value;
+  -o-border-radius: $value;
+}
+
+@mixin transition($value) {
+  transition: all $value;
+  -webkit-transition: all $value;
+  -moz-transition: all $value;
+  -ms-transition: all $value;
+  -o-transition: all $value;
+}
+
+
+
+.Container {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.Color {
+  color: #000;
+}
+
+
+$primery:#FD6E0A;
+
+$text_color:#DcDcDc;
+
+$main_head:#181818;
+
+* {
+  margin: 0;
+  padding: 0;
+  @include transition(1s);
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+button {
+  a {
+    text-decoration: none;
+  }
+}
+
+ul {
+  padding: 0;
+
+  li {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+p {
+  color: #757575;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.btn_prm {
+  padding: 15px 40px;
+  background-color: $primery;
+  @include border-radius(5px);
+
+  a {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+}
+
+.sec_ti {
+  *{
+    margin:30px 0px;
+  }
+  max-width: 830px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  .man_ti {
+    font-size: 35px;
+    font-weight: 700;
+    color: #181818;
+  }
+}
+
+
+//========================================================================
+//                            header_section
+//========================================================================
+
+.header_section {
+
+  width: 100vw;
+  background-repeat: no-repeat;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center !important;
+    padding: 50px 0px;
+
+    .manu {
+      ul {
+        display: flex;
+        align-items: center;
+
+
+        li {
+          margin-left: 20px;
+
+          a {
+            font-size: 20px;
+            color: #474747;
+
+            font-weight: 400;
+          }
+        }
+
+      }
+
+      .btn_prm {
+        padding: 15px 40px;
+        background-color: $primery;
+        margin-left: 20px;
+        @include border-radius(5px);
+
+        a {
+          font-size: 20px;
+          font-weight: 700;
+          color: #ffffff;
+        }
+      }
+    }
+
+    .logo {
+      h1 {
+        color: $main_head;
+        font-weight: 800;
+        font-size: 45px;
+
+        span {
+          color: $primery;
+        }
+      }
+    }
+  }
+}
+
+//========================================================================
+//                            banner_section
+//========================================================================
+
+
+
+.banner_section {
+  padding: 0;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: 100 0;
+  margin-left: 50px;
+
+  .ban_con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ban_des {
+    margin-left: 150px;
+    max-width: 600px;
+    width: 100%;
+
+    * {
+      margin-top: 15px;
+    }
+
+    .ban_sub {
+      color: #474747;
+      font-size: 45px;
+      font-weight: 600;
+    }
+
+    .bottons {
+      display: flex;
+    }
+
+    .ban_title {
+      color: #181818;
+      font-size: 85px;
+      font-weight: 700;
+    }
+  }
+
+  .ban_img {
+    display: flex;
+    justify-content: end;
+    max-width: 900px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+}
+
+
+//========================================================================
+//                            About_section
+//========================================================================
+
+
+.About_section{
+  padding: 100px 0px;
+  .ab_del{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    width: 60%;
+    margin: 0 auto;
+    gap: 50px;
+    .itm{
+      margin-top: 20px;
+      text-align: center;
+      .Name{
+        font-size: 20px;
+        color: #757575;
+        font-weight: 400;
+      }
+      .Name_au{
+        color: #474747;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+//========================================================================
+//                            React_section
+//========================================================================
+
+.React_section{
+  margin: 100px 15px;
+
+  .res_cards{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    max-width: 100%;
+    .card{
+      *{
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+//========================================================================
+//                            Summary_section
+//========================================================================
+
+.Summary_section{
+  margin-top: 100px;
+  .sma_div{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    column-gap: 100px;
+    margin: 0 auto;
+    .sma_box{
+      width: auto;
+      margin-top: 40px;
+      h3{
+        margin-top: 20px;
+      }
+      h5{
+        margin-top: 10px;
+        font-weight: 500;
+      }
+      *{
+        margin-top: 10px;
+      }
+    }
+
+  }  
+    .bottons{
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+}
+
+
+//========================================================================
+//                            Connect_section
+//========================================================================
+
+
+.Connect_section{
+  margin: 100px 0px;
+ .Conten_contol{
+  display: grid;
+  grid-template-columns: repeat(2 , 1fr);
+  .sec_ti{
+    text-align: left;
+  }
+  .Con_inp{
+    form{   
+      padding: 0;
+      margin: 0;
+      input ,textarea{
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #0000002c;
+        outline: none;
+        width: 100%;
+      }
+
+    }
+  }
+ } 
+
+}
+
+
+
